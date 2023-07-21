@@ -19,7 +19,7 @@ namespace MainForms
             Application.Run(new P03_MainForm());
 
 
-            int i = 10;
+            int i = 100;
         }
 
     }
