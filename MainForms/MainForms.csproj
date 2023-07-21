@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FormList\FormList.csproj">
+      <Project>{a041a9c7-8afc-4e5c-a494-d595a2feb7c1}</Project>
+      <Name>FormList</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{e01c9c9d-731b-4f14-b7be-6a0bf1c8729c}</Project>
       <Name>Services</Name>

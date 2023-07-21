@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using FormList;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +47,53 @@ namespace MainForms
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+
+        private void P03_MainForms_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("프로그램을 종료 하시겠습니까?", "프로그램 종료", MessageBoxButtons.YesNo);
+            if (Result == DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+            }
+        }
+
+        private void btnMaterial_Click(object sender, EventArgs e)
+        {
+            DoFormVisible();
+            MaterialControl Mc = new MaterialControl();
+            Mc.TopLevel = false;
+            panel1.Controls.Add(Mc);
+            Mc.Show();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            
+           // Mc.WindowState = FormWindowState.Maximized;     // 최대 화면으로 키워서 나타내는 코드
+
+
+        }
+
+        // 메뉴를 클릭 했을때 이전에 연 메뉴들은 안 보이게 해주는 메서드 
+        private void DoFormVisible()
+        {
+            if (panel1.Controls.Count != 0)
+            {
+                for (int i = 0; i < panel1.Controls.Count; i++)
+                {
+                    panel1.Controls[i].Visible = false;
+                }
+                panel1.Controls[0].Visible = false;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DoFormVisible();
         }
     }
 }

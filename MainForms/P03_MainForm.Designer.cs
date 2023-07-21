@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(P03_MainForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stsFormName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -38,19 +37,18 @@
             this.stsNowdate = new System.Windows.Forms.ToolStripStatusLabel();
             this.timNowDate = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnMaterial = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnProductControl = new System.Windows.Forms.Button();
+            this.btnProductMoniter = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -60,13 +58,12 @@
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.BackColor = System.Drawing.Color.AliceBlue;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnExit,
-            this.toolStripButton2});
+            this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(334, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(909, 116);
+            this.toolStrip1.Size = new System.Drawing.Size(939, 116);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -77,9 +74,9 @@
             this.toolStripStatusLabel2,
             this.stsUserName,
             this.stsNowdate});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 691);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 709);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1243, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1273, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -93,7 +90,7 @@
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(728, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(758, 17);
             this.toolStripStatusLabel2.Spring = true;
             // 
             // stsUserName
@@ -119,10 +116,10 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.AliceBlue;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
+            this.flowLayoutPanel1.Controls.Add(this.btnMaterial);
+            this.flowLayoutPanel1.Controls.Add(this.btnProduct);
+            this.flowLayoutPanel1.Controls.Add(this.btnProductControl);
+            this.flowLayoutPanel1.Controls.Add(this.btnProductMoniter);
             this.flowLayoutPanel1.Controls.Add(this.button6);
             this.flowLayoutPanel1.Controls.Add(this.button7);
             this.flowLayoutPanel1.Controls.Add(this.button8);
@@ -130,64 +127,66 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(334, 691);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(334, 709);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // button2
+            // btnMaterial
             // 
-            this.button2.BackColor = System.Drawing.Color.AliceBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.Location = new System.Drawing.Point(3, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(326, 46);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "       ⦁  원재료 관리";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMaterial.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaterial.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMaterial.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btnMaterial.Location = new System.Drawing.Point(3, 198);
+            this.btnMaterial.Name = "btnMaterial";
+            this.btnMaterial.Size = new System.Drawing.Size(326, 46);
+            this.btnMaterial.TabIndex = 5;
+            this.btnMaterial.Text = "       ⦁  원재료 관리";
+            this.btnMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaterial.UseVisualStyleBackColor = false;
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
-            // button3
+            // btnProduct
             // 
-            this.button3.BackColor = System.Drawing.Color.AliceBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Location = new System.Drawing.Point(3, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(326, 46);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "       ⦁  생산현황";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnProduct.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnProduct.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btnProduct.Location = new System.Drawing.Point(3, 250);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(326, 46);
+            this.btnProduct.TabIndex = 6;
+            this.btnProduct.Text = "       ⦁  생산현황";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // button4
+            // btnProductControl
             // 
-            this.button4.BackColor = System.Drawing.Color.AliceBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button4.Location = new System.Drawing.Point(3, 302);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(326, 46);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "       ⦁  생산실적관리";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnProductControl.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnProductControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductControl.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnProductControl.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btnProductControl.Location = new System.Drawing.Point(3, 302);
+            this.btnProductControl.Name = "btnProductControl";
+            this.btnProductControl.Size = new System.Drawing.Size(326, 46);
+            this.btnProductControl.TabIndex = 7;
+            this.btnProductControl.Text = "       ⦁  생산실적관리";
+            this.btnProductControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductControl.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnProductMoniter
             // 
-            this.button5.BackColor = System.Drawing.Color.AliceBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button5.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.button5.Location = new System.Drawing.Point(3, 354);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(326, 46);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "       ⦁  생산모니터링";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnProductMoniter.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnProductMoniter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductMoniter.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnProductMoniter.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btnProductMoniter.Location = new System.Drawing.Point(3, 354);
+            this.btnProductMoniter.Name = "btnProductMoniter";
+            this.btnProductMoniter.Size = new System.Drawing.Size(326, 46);
+            this.btnProductMoniter.TabIndex = 8;
+            this.btnProductMoniter.Text = "       ⦁  생산모니터링";
+            this.btnProductMoniter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductMoniter.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -231,16 +230,27 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::MainForms.Properties.Resources.Logo;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(334, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(939, 593);
+            this.panel1.TabIndex = 4;
+            // 
             // btnExit
             // 
             this.btnExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnExit.AutoSize = false;
-            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnExit.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnExit.Image = global::MainForms.Properties.Resources.btn종료;
             this.btnExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExit.ImageTransparentColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 100);
             this.btnExit.Text = "종료";
@@ -249,17 +259,9 @@
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(116, 113);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::MainForms.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -267,6 +269,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -298,22 +301,13 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(334, 116);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(909, 575);
-            this.tabControl1.TabIndex = 4;
-            // 
             // P03_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1243, 713);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1273, 731);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
@@ -321,6 +315,7 @@
             this.Name = "P03_MainForm";
             this.Text = "P03_MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.P03_MainForms_FormClosing);
             this.Load += new System.EventHandler(this.P03_MainForm_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -336,7 +331,6 @@
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnExit;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Timer timNowDate;
         private System.Windows.Forms.ToolStripStatusLabel stsFormName;
@@ -346,15 +340,15 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnMaterial;
+        private System.Windows.Forms.Button btnProduct;
+        private System.Windows.Forms.Button btnProductControl;
+        private System.Windows.Forms.Button btnProductMoniter;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
