@@ -17,6 +17,10 @@ namespace MainForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new P03_MainForm());
+
+
+            int i = 10;
         }
+
     }
 }
