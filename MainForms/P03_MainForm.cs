@@ -24,9 +24,9 @@ namespace MainForms
         
         private void P03_MainForm_Load(object sender, EventArgs e)
         {
-            ThreadStart StartThread = new ThreadStart(TimeShow);
-            thread_NowDate = new Thread(StartThread);
-            thread_NowDate.Start();
+            //ThreadStart StartThread = new ThreadStart(TimeShow);
+            //thread_NowDate = new Thread(StartThread);
+            //thread_NowDate.Start();
         }
 
         private void timNowDate_Tick(object sender, EventArgs e)
@@ -78,7 +78,8 @@ namespace MainForms
 
         }
 
-        // 메뉴를 클릭 했을때 이전에 연 메뉴들은 안 보이게 해주는 메서드 
+        // 메뉴를 클릭 했을때 이전에 연 메뉴들은 안 보이게 해주는 메서드
+        // 이전에 연 메뉴들이 계속 떠 있을 경우 메모리 차지, 버벅거림이 생길 수 있으므로
         private void DoFormVisible()
         {
             if (panel1.Controls.Count != 0)
@@ -94,6 +95,15 @@ namespace MainForms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DoFormVisible();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DoFormVisible();
+            CCP_stat ccpstat = new CCP_stat();
+            ccpstat.TopLevel = false;
+            panel1.Controls.Add(ccpstat);
+            ccpstat.Show();
         }
     }
 }

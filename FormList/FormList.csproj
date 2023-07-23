@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCP_stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCP_stat.Designer.cs">
+      <DependentUpon>CCP_stat.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +69,9 @@
     <Compile Include="Material.designer.cs">
       <DependentUpon>Material.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CCP_stat.resx">
+      <DependentUpon>CCP_stat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MaterialControl.resx">
       <DependentUpon>MaterialControl.cs</DependentUpon>
     </EmbeddedResource>
